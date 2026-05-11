@@ -67,12 +67,16 @@
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['clangd'].setup {
+  vim.lsp.config('clangd', {
     capabilities = capabilities
-  }
-  require('lspconfig')['ts_ls'].setup {
+  })
+  vim.lsp.config('ts_ls', {
     capabilities = capabilities
-  }
-  require('lspconfig')['pyright'].setup {
+  })
+  vim.lsp.config('pyright', {
     capabilities = capabilities
-  }
+  })
+
+  vim.lsp.enable("ts_ls")
+  vim.lsp.enable("clangd")
+  vim.lsp.enable("pyright")

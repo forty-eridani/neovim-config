@@ -19,5 +19,13 @@ Map("n", "<C-Right>", ":vertical resize +1<CR>")
 Map("v", "<", "<gv")
 Map("v", ">", ">gv")
 
+-- Autoformatter stuff
+vim.keymap.set("n", "fo", 
+	function()
+		require("conform").format({ bufnr = vim.api.nvim_get_current_buf() })
+		print("Formatted")
+	end
+)
+
 -- Telescope stuff
 vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files' })
