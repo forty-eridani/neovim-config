@@ -1,4 +1,5 @@
 require("config.lazy")
+require("plugin-configs.conform")
 require("plugin-configs.cmp")
 require("plugin-configs.comment")
 
