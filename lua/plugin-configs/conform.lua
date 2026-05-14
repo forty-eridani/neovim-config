@@ -11,5 +11,7 @@ require("conform").setup({
 		c = { "clang-format" },
 
 		cpp = { "clang-format" },
+		
+		markdown = { "deno_fmt" },
 	},
 })
